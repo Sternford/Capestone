@@ -1,0 +1,2 @@
+PYTHONPATH = C:\spark-2.1.0-bin-hadoop2.7\python;C:\spark-2.1.0-bin-hadoop2.7\python\lib\py4j-0.8.2.1-src.zip
+SPARK_HOME = C:\spark-2.1.0-bin-hadoop2.7

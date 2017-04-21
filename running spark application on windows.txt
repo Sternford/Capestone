@@ -1,0 +1,19 @@
+#Instalation cluster in Windows
+spark-class org.apache.spark.deploy.master.Master
+--master will give [spark://HOST POST -URL] -address for starting application
+
+
+#Initiate the operation of one or more processes, applications and connect them to the master
+spark-class org.apache.spark.deploy.worker.Worker spark://192.168.56.1:7077
+
+#submit application to spark cluster
+spark-submit --packages org.apache.spark:spark-streaming-kafka_2.10:1.3.1 --jars C:\hadoop\jars\spark-streaming-kafka-0-10_2.11-2.1.0.jar --master spark://192.168.56.1:7077 C:\Users\Stanzoman\Documents\projects\Capestone\spark_streaming.py
+
+
+spark-submit --jars C:\hadoop\jars\spark-streaming-kafka-0-10_2.11-2.1.0.jar,C:\kafka_2.11-0.10.2.0\libs\kafka_2.11-0.10.2.0.jar,C:\kafka_2.11-0.10.2.0\libs\zkclient-0.10.jar,C:\kafka_2.11-0.10.2.0\libs\metrics-core-2.2.0.jar C:\Users\Stanzoman\Documents\projects\Capestone\spark_streaming.py
+
+spark-submit --jars C:\hadoop\jars\spark-streaming-kafka-0-10_2.11-2.1.0.jar C:\Users\Stanzoman\Documents\projects\Capestone\spark_streaming.py
+
+spark-submit --packages org.apache.spark:spark-streaming-kafka_2.10:1.3.1 --master spark://192.168.56.1:7077 C:\Users\Stanzoman\Documents\projects\Capestone\spark_streaming.py my_data
+
+spark-submit --packages org.apache.spark:spark-streaming-kafka_2.10:1.5.0 --jars C:\hadoop\jars\spark-streaming-kafka_2.10-1.5.0.jar C:\Users\Stanzoman\Documents\projects\Capestone\spark_streaming.py
